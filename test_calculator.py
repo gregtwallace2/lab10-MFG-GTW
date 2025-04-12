@@ -20,12 +20,16 @@ class TestCalculator(unittest.TestCase):
     ##########################
 
     ######## Partner 1
-    # def test_multiply(self): # 3 assertions
-    #     fill in code
+    def test_multiply(self):
+        self.assertEqual(mul(2,5),10)
+        self.assertEqual(mul(-4,5),-20)
+        self.assertEqual(mul(0,10000),0)
 
-    # def test_divide(self): # 3 assertions
-    #     fill in code
-    # ##########################
+    def test_divide(self):
+        self.assertEqual(div(2,10),5.0)
+        self.assertEqual(div(0.5,2.0),4.0)
+        with self.assertRaises(ZeroDivisionError):
+            div(0,100)
 
     ######## Partner 2
     def test_divide_by_zero(self): # 1 assertion
@@ -47,23 +51,20 @@ class TestCalculator(unittest.TestCase):
     # ##########################
     
     ######## Partner 1
-    # def test_log_invalid_argument(self): # 1 assertion
-    #     # call log function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     logarithm(0, 5)
-    #     fill in code
+    def test_log_invalid_argument(self):
+        with self.assertRaises(ValueError):
+            log(0,5)
 
-    # def test_hypotenuse(self): # 3 assertions
-    #     fill in code
+    def test_hypotenuse(self):
+        self.assertAlmostEqual(hypotenuse(3,4),5.0)
+        self.assertAlmostEqual(hypotenuse(5,12),13.0)
+        self.assertAlmostEqual(hypotenuse(-6,-8),10.0)
 
-    # def test_sqrt(self): # 3 assertions
-    #     # Test for invalid argument, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #    square_root(NUM)
-    #     # Test basic function
-    #     fill in code
-    ##########################
-
+    def test_sqrt(self):
+        with self.assertRaises(ValueError):
+            square_root(-9)
+        self.asserAlmostEqual(square_root(9),3.0)
+        self.assertAlmostEqual(square_root(0.25),0.5)
 # Do not touch this
 if __name__ == "__main__":
     unittest.main()
