@@ -14,13 +14,10 @@ One function per operation, in order.
 
 import math
 def square_root(a):
-    try:
-        if a<0:
-            raise ValueError("Cannot take square root of a negative number!")
-        return math.sqrt(a)
-    except ValueError as error:
-        print(f"Error: {error}")
-        return None
+    if a<0:
+        raise ValueError("Cannot take square root of a negative number!")
+    return math.sqrt(a)
+
 
 def hypotenuse (a,b):
     try:
