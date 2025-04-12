@@ -1,3 +1,8 @@
+# https://github.com/gregtwallace2/lab10-MFG-GTW
+# Partner 1: Maria Guerra
+# Partner 2: Gregory Wallace
+
+
 """
 calculator.py
 - Defines functions used to create a simple calculator
