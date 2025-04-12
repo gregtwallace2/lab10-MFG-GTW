@@ -13,7 +13,6 @@ One function per operation, in order.
 # First example
 
 import math
-
 def square_root(a):
     try:
         if a<0:
